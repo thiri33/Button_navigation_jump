@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bottom Navigation Jump</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="page" class="site">
+    <nav>
+      <ul>
+        <li class="active"><a href="#"><i class="ri-home-2-line"></i></a></li>
+        
+        <li><a href="#"><i class="ri-chat-3-line"></i></a></li>
+        
+        <li class="has-child">
+          <a href="#"><i class="ri-camera-line"></i></a>
+          <ul class="sub-menu">
+            <li><a href="#"><i class="ri-image-edit-fill"></i></a></li>
+            <li><a href="#"><i class="ri-camera-off-fill"></i></a></li>
+            <li><a href="#"><i class="ri-phone-camera-fill"></i></a></li>
+            <li><a href="#"><i class="ri-camera-lines-fill"></i></a></li>
+          </ul>
+        </li>
+        
+        <li class="has-child">
+          <a href="#"><i class="ri-earth-line"></i></a>
+          <ul class="sub-menu">
+            <li><a href="#"><i class="ri-image-edit-fill"></i></a></li>
+            <li><a href="#"><i class="ri-camera-off-fill"></i></a></li>
+            <li><a href="#"><i class="ri-phone-camera-fill"></i></a></li>
+            <li><a href="#"><i class="ri-camera-lines-fill"></i></a></li>
+          </ul>
+        </li>
+        
+        <li class="has-child">
+          <a href="#"><i class="ri-user-line"></i></a>
+          <ul class="sub-menu">
+            <li><a href="#"><i class="ri-image-edit-fill"></i></a></li>
+            <li><a href="#"><i class="ri-camera-off-fill"></i></a></li>
+            <li><a href="#"><i class="ri-phone-camera-fill"></i></a></li>
+            <li><a href="#"><i class="ri-camera-lines-fill"></i></a></li>
+          </ul>
+        </li>
+        
+        <li class="last"></li>
+      </ul>
+    </nav>
+  </div>
+
+  <script>
+    const trigger = document.querySelectorAll('nav li');
+    trigger.forEach((menu) => menu.addEventListener('click', toggle));
+    function toggle() {
+      trigger.forEach((item) => item != this ? item.classList.remove('active') : null);
+      if (this.classList != 'active') {
+        this.classList.toggle('active')
+      }
+    }
+  </script>
+  
+</body>
+</html>
